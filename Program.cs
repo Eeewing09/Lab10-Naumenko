@@ -95,3 +95,28 @@ foreach (int i in mas)
     }
 }
 Console.WriteLine(c);
+// ***
+string[] names = { "Аня", "Борис", "Влад", "Даша" };
+int[] grades = { 5, 4, 3, 5 };
+double sum = 0;
+int max = grades[0];
+string best = names[0];
+
+for (int i = 0; i < names.Length; i++)
+{
+    
+    Console.WriteLine(names[i] + " — " + grades[i]);
+
+    
+    sum = sum + grades[i];
+
+    
+    if (grades[i] > max)
+    {
+        max = grades[i];
+        best = names[i];
+    }
+}
+double average = sum / names.Length;
+Console.WriteLine($"Средний балл: {average}");
+Console.WriteLine($"Ученик с максимальной оценкой: {best}");
